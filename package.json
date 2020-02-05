@@ -5,6 +5,7 @@
   "homepage": "http://strapi.io",
   "keywords": [
     "algolia",
+    "algoliasearch",
     "hook",
     "search",
     "strapi"
@@ -20,7 +21,8 @@
     "isHook": true
   },
   "author": {
-  "name": "MattieBelt",
+  "name": "Mattias Belt, van den",
+  "email": "mattiasvandenbelt@gmail.com",
   "url": "https://github.com/MattieBelt"
   },
   "repository": {
