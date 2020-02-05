@@ -21,9 +21,9 @@
     "isHook": true
   },
   "author": {
-  "name": "Mattias Belt, van den",
-  "email": "mattiasvandenbelt@gmail.com",
-  "url": "https://github.com/MattieBelt"
+    "name": "Mattias Belt, van den",
+    "email": "mattiasvandenbelt@gmail.com",
+    "url": "https://github.com/MattieBelt"
   },
   "repository": {
     "type": "git",
