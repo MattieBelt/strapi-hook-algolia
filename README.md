@@ -35,7 +35,7 @@ To activate and configure the hook with, you need to edit your ./config/hook.jso
     "applicationId": "ABCDEFGHIJ",
     "apiKey": "secure_algolia_api_key",
     "debug": true,              // default: false
-    "prefix": "my_own_prefix"   // default: Strapi envrionment (strapi.config.environment)
+    "prefix": "my_own_prefix"   // default: Strapi environment (strapi.config.environment)
   }
 }
 ```

@@ -15,7 +15,7 @@
   },
   "main": "lib",
   "dependencies": {
-    "algoliasearch": "^4.0.1"
+    "algoliasearch": "^4.0.2"
   },
   "strapi": {
     "isHook": true
