@@ -27,8 +27,8 @@ This hook allows you to use [Algolia](https://algolia.com/) as a service in Stra
 
 **deleteObject** should be used in the Lifecycle callback _afterDelete_. Fired after a `delete` query.
 ```js
-  afterDelete: (model) => {
-    strapi.services.algolia.deleteObject(model.id, 'information');
+  afterDelete: (result) => {
+    strapi.services.algolia.deleteObject(result.id, 'information');
   },
 ```
 
