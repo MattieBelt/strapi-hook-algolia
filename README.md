@@ -1,35 +1,40 @@
 # strapi-hook-algolia
 
-This hook allows you to use [Algolia](https://algolia.com/) as a service in Strapi. Algolia is a hosted search engine capable of delivering real-time results from the first keystroke. Algolia's powerful API lets you quickly and seamlessly implement search within your websites, mobile, and voice applications.
+This hook allows you to use [Algolia](https://algolia.com/) as a service in [Strapi](https://github.com/strapi/strapi) `strapi.services.algolia`. Algolia is a hosted search engine capable of delivering real-time results from the first keystroke. Algolia's powerful API lets you quickly and seamlessly implement search within your websites, mobile, and voice applications.
+
+## Installation
+
+```bash
+# using yarn
+yarn add strapi-hook-algolia
+
+# using npm
+npm install strapi-hook-algolia --save
+```
 
 ## Usage
 
 1) [Create a Algolia account](https://www.algolia.com/users/sign_up)
-2) Edit your config, add your own Application ID & Admin API Key
-3) Use the algolia service in the [Lifecycle callbacks](https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks) of your Content type(s)
+2) [Edit your config](#hook-config), add your own Application ID & Admin API Key
+3) Use the algolia service in the [Lifecycle callbacks](https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks) of your ContentType
 
-#### strapi.services.algolia
-
-**saveObject** should be used in the Lifecycle callback _afterCreate. Fired after an `insert`.
+**saveObject()** should be used in the Lifecycle callback `afterCreate`, fired after an _insert_, and `afterUpdate`, fired after an _update_.
 ```js
-  afterCreate(result) {
-    strapi.services.algolia.saveObject(result, index);
-  },
+  afterCreate(result, data) {
+    strapi.services.algolia.saveObject(result, 'index');
+  }
+```
+```js
+  afterUpdate(result, params, data) {
+    strapi.services.algolia.saveObject(result, 'index');
+  }
 ```
 
-**updateObject** should be used in the Lifecycle callback _afterSave_. Fired after an `update` query.
-
+**deleteObject()** should be used in the Lifecycle callback `afterDelete`, fired after a _delete_ query.
 ```js
-  afterCreate(result) {
-    strapi.services.algolia.saveObject(result, index);
-  },
-```
-
-**deleteObject** should be used in the Lifecycle callback _afterDelete_. Fired after a `delete` query.
-```js
-  afterDelete: (result) => {
-    strapi.services.algolia.deleteObject(result.id, 'information');
-  },
+  afterDelete(result, params) {
+    strapi.services.algolia.deleteObject(result.id, 'index');
+  }
 ```
 
 **Full Example**
@@ -39,42 +44,36 @@ const index = 'post';
 
 module.exports = {
   lifecycles: {
-    afterCreate(result) {
+    afterCreate(result, data) {
       strapi.services.algolia.saveObject(result, index);
     },
     afterUpdate(result, params, data) {
       strapi.services.algolia.saveObject(result, index);
     },
-    afterDelete(result, params, data) {
+    afterDelete(result, params) {
       strapi.services.algolia.deleteObject(result.id, index);
     },
   },
 };
 ```
 
-## Strapi config
+## Hook config
 
-To activate and configure the hook, you need to create or update the file _./config/hook.js_ in your strapi app.
+To activate and configure the hook, you need to create or update the file `./config/hook.js` in your strapi app.
 
 ```js
   module.exports = {
     settings: {
-      ...
-      "algolia": {
-        "enabled": true,
-        "applicationId": "ABCDEFGHIJ",
-        "apiKey": "secure_algolia_api_key",
-        "debug": true,              // default: false
-        "prefix": "my_own_prefix"   // default: Strapi environment (strapi.config.environment)
+      // ...
+      'algolia': {
+        'enabled': true,
+        'applicationId': 'ABCDEFGHIJ',
+        'apiKey': 'secure_algolia_admin_api_key',
+        'debug': true,              // default: false
+        'prefix': 'my_own_prefix'   // default: Strapi environment (strapi.config.environment)
       },
     }
   };
-```
-
-## Installation
-
-```bash
-npm i strapi-hook-algolia
 ```
 
 ### Resources
