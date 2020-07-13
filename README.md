@@ -65,12 +65,12 @@ To activate and configure the hook, you need to create or update the file `./con
   module.exports = {
     settings: {
       // ...
-      'algolia': {
-        'enabled': true,
-        'applicationId': 'ABCDEFGHIJ',
-        'apiKey': 'secure_algolia_admin_api_key',
-        'debug': true,              // default: false
-        'prefix': 'my_own_prefix'   // default: Strapi environment (strapi.config.environment)
+      algolia: {
+        enabled: true,
+        applicationId: 'ABCDEFGHIJ',
+        apiKey: 'secure_algolia_admin_api_key',
+        debug: true,              // default: false
+        prefix: 'my_own_prefix'   // default: Strapi environment (strapi.config.environment)
       },
     }
   };
