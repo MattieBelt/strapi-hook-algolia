@@ -2,6 +2,13 @@
 
 This hook allows you to use [Algolia](https://algolia.com/) as a service in [Strapi](https://github.com/strapi/strapi) `strapi.services.algolia`. Algolia is a hosted search engine capable of delivering real-time results from the first keystroke. Algolia's powerful API lets you quickly and seamlessly implement search within your websites, mobile, and voice applications.
 
+**Supported Strapi versions:**
+
+* v3.1.x (recommended)
+* v3.0.x
+
+_Older version may work with the beta version of this hook, but are not supported._ 
+
 ## Installation
 
 ```bash
@@ -83,5 +90,5 @@ To activate and configure the hook, you need to create or update the file `./con
 ### Links
 
 - [Strapi website](http://strapi.io/)
-- [Strapi community on Slack](http://slack.strapi.io)
+- [Strapi community on Slack](http://slack.strapi.io) (@MattieBelt)
 - [Strapi news on Twitter](https://twitter.com/strapijs)
