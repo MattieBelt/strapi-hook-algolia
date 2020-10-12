@@ -64,6 +64,27 @@ module.exports = {
 };
 ```
 
+If you are using the draft/publish feature, here is an example on how to only index published entries:
+
+```js
+const index = 'post';
+
+module.exports = {
+  lifecycles: {
+    afterUpdate(result, params, data) {
+      if (result.published_at) {
+        strapi.services.algolia.saveObject(result, index);
+      } else {
+        strapi.services.algolia.deleteObject(result.id, index);
+      }
+    },
+    afterDelete(result, params) {
+      strapi.services.algolia.deleteObject(result.id, index);
+    },
+  },
+};
+```
+
 ## Hook config
 
 To activate and configure the hook, you need to create or update the file `./config/hook.js` in your strapi app.
