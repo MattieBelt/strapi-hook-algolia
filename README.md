@@ -93,6 +93,28 @@ module.exports = {
 };
 ```
 
+**Using the algoliasearch client** 
+You can access the algolia javascript client, read the [official documentation](https://www.algolia.com/doc/api-reference/api-methods/) to know more.
+
+```js
+/**
+ * api/my-model/controllers/my-model.js
+ */
+
+module.exports = {
+  async myController(ctx) {
+    // ...
+
+    // https://www.algolia.com/doc/api-reference/api-methods/
+    const { client } = strapi.services.algolia
+    await client.listIndices()
+
+    // ...
+  },
+}
+```
+
+
 ## Hook config
 
 To activate and configure the hook, you need to create or update the file `./config/hook.js` in your strapi app.
