@@ -11,7 +11,7 @@ This hook allows you to use [Algolia](https://algolia.com/) as a service in [Str
 
 **Supported Strapi versions:**
 
-* v3.2.x (recommended)
+* v3.4.x (recommended)
 * v3.x
 
 _Older version may work with the beta version of this hook, but are not supported._ 
