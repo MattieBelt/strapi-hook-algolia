@@ -1,7 +1,7 @@
 {
   "name": "strapi-hook-algolia",
   "version": "3.4.0",
-  "description": "A hook to setup a Algolia service for the Strapi framework",
+  "description": "A hook to setup an Algolia service for the Strapi framework",
   "homepage": "http://strapi.io",
   "keywords": [
     "algolia",
@@ -16,7 +16,7 @@
   },
   "main": "lib",
   "dependencies": {
-    "algoliasearch": "^4.0.2"
+    "algoliasearch": "^4.9.1"
   },
   "strapi": {
     "isHook": true
@@ -34,11 +34,8 @@
     "url": "https://github.com/MattieBelt/strapi-hook-algolia/issues"
   },
   "engines": {
-    "node": ">=10.0.0",
+    "node": ">=10.16.0 <=14.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT",
-  "scripts": {
-    "test": "echo no test specified"
-  }
+  "license": "MIT"
 }

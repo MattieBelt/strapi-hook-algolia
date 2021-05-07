@@ -11,7 +11,7 @@ This hook allows you to use [Algolia](https://algolia.com/) as a service in [Str
 
 **Supported Strapi versions:**
 
-* v3.4.x (recommended)
+* v3.6.x (recommended)
 * v3.x
 
 _Older version may work with the beta version of this hook, but are not supported._ 
@@ -30,7 +30,7 @@ npm install strapi-hook-algolia --save
 
 1) [Create a Algolia account](https://www.algolia.com/users/sign_up)
 2) [Edit your config](#hook-config), add your own Application ID & Admin API Key
-3) Use the algolia service in the [Lifecycle callbacks](https://strapi.io/documentation/v3.x/concepts/models.html#lifecycle-hooks) of your ContentType
+3) Use the algolia service in the [Lifecycle hooks](https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#lifecycle-hooks) of your ContentType
 
 **saveObject()** should be used in the Lifecycle callback `afterCreate`, fired after an _insert_, and `afterUpdate`, fired after an _update_.
 ```js
@@ -93,7 +93,7 @@ module.exports = {
 };
 ```
 
-**Using the algoliasearch client** 
+**Using the algoliasearch client**  
 You can access the algolia javascript client, read the [official documentation](https://www.algolia.com/doc/api-reference/api-methods/) to know more.
 
 ```js
