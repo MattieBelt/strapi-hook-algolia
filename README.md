@@ -128,7 +128,7 @@ To activate and configure the hook, you need to create or update the file `./con
         applicationId: 'ABCDEFGHIJ',
         apiKey: 'secure_algolia_admin_api_key',
         debug: true,              // default: false
-        prefix: 'my_own_prefix'   // default: Strapi environment (strapi.config.environment)
+        prefix: 'my_own_prefix'   // default: false
       },
     }
   };
