@@ -128,11 +128,14 @@ To activate and configure the hook, you need to create or update the file `./con
         applicationId: 'ABCDEFGHIJ',
         apiKey: 'secure_algolia_admin_api_key',
         debug: true,              // default: false
-        prefix: 'my_own_prefix'   // default: false
+        prefix: 'my_own_prefix'   // default: Strapi environment (strapi.config.environment)
       },
     }
   };
 ```
+### Prefix
+- Default prefix (string): strapi.config.environment (dev_index, prod_index)
+- No prefix: false (index)
 
 ### Support
 - [Strapi community on Slack](http://slack.strapi.io), feel free to DM me (@MattieBelt).
