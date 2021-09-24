@@ -133,6 +133,13 @@ To activate and configure the hook, you need to create or update the file `./con
     }
   };
 ```
+### Prefix
+The default prefix uses `strapi.config.environment`, resulting in for example: 'development_post'.
+
+A custom prefix can be configured with the `prefix` option in the hook config.
+ 
+If you don't want to use any prefix at all, you can configure it with: `prefix: false`.
+
 
 ### Support
 - [Strapi community on Slack](http://slack.strapi.io), feel free to DM me (@MattieBelt).
