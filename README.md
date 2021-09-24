@@ -97,23 +97,18 @@ module.exports = {
 You can access the algolia javascript client, read the [official documentation](https://www.algolia.com/doc/api-reference/api-methods/) to know more.
 
 ```js
-/**
- * api/my-model/controllers/my-model.js
- */
+// api/my-model/controllers/my-model.js
 
 module.exports = {
   async myController(ctx) {
-    // ...
-
     // https://www.algolia.com/doc/api-reference/api-methods/
-    const { client } = strapi.services.algolia
-    await client.listIndices()
+    const { client } = strapi.services.algolia;
+    await client.listIndices();
 
     // ...
   },
 }
 ```
-
 
 ## Hook config
 
@@ -128,21 +123,19 @@ To activate and configure the hook, you need to create or update the file `./con
         applicationId: 'ABCDEFGHIJ',
         apiKey: 'secure_algolia_admin_api_key',
         debug: true,              // default: false
-        prefix: 'my_own_prefix'   // default: Strapi environment (strapi.config.environment)
+        prefix: 'my_own_prefix',  // default: Strapi environment (strapi.config.environment)
       },
     }
   };
 ```
 ### Prefix
-The default prefix uses `strapi.config.environment`, resulting in for example: 'development_post'.
-
-A custom prefix can be configured with the `prefix` option in the hook config.
- 
+The default prefix uses `strapi.config.environment`, resulting in for example: 'development_post'.  
+A custom prefix can be configured with the `prefix` option in the hook config.  
 If you don't want to use any prefix at all, you can configure it with: `prefix: false`.
 
 
 ### Support
-- [Strapi community on Slack](http://slack.strapi.io), feel free to DM me (@MattieBelt).
+- [Strapi community on Discord](https://discord.strapi.io), feel free to DM me (@MattieBelt).
 - [GitHub issues](https://github.com/MattieBelt/strapi-hook-algolia/issues) for bugs 🐛, contributions 🔧 or just anything to discuss 💬.
 
 ### Resources
