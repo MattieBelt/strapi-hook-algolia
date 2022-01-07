@@ -106,7 +106,7 @@
     "@algolia/logger-common" "4.12.0"
     "@algolia/requester-common" "4.12.0"
 
-algoliasearch@^4.10.5:
+algoliasearch@^4.12.0:
   version "4.12.0"
   resolved "https://registry.yarnpkg.com/algoliasearch/-/algoliasearch-4.12.0.tgz#30f2619b6e3a5b79b6aa0f18ab66fbce88240aba"
   integrity sha512-fZOMMm+F3Bi5M/MoFIz7hiuyCitJza0Hu+r8Wzz4LIQClC6YGMRq7kT6NNU1fSSoFDSeJIwMfedbbi5G9dJoVQ==
