@@ -1,5 +1,7 @@
 # strapi-hook-algolia
-
+- - - - -
+Strapi **v4.x** support, see `@mattie-bundle/strapi-plugin-search` at https://mattie-bundle.mattiebelt.com/search/plugin.
+- - - - -
 <a href="https://www.npmjs.org/package/strapi-hook-algolia">
     <img src="https://img.shields.io/npm/v/strapi-hook-algolia" alt="NPM Version" />
 </a>
